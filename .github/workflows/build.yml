@@ -15,4 +15,6 @@ jobs:
       - uses: android-actions/setup-android@v2
       - uses: gradle/gradle-build-action@v2
       - run: |
+          mkdir -p app/libs
+          wget -o app/libs/libbox.aar https://github.com/NickCao/sing-box/releases/download/latest/libbox.aar
           ./gradlew build
